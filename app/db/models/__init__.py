@@ -22,6 +22,7 @@ class Transaction(db.Model,SerializerMixin):
         self.amount = amount
         self.type = type
 
+
 class User(UserMixin, db.Model):
     __tablename__ : str = 'users'
 
