@@ -17,6 +17,7 @@ class Transaction(db.Model,SerializerMixin):
     user = relationship("User", back_populates="transactions", uselist=False)
 
 
+
     def __init__(self, amount, type):
         self.amount = amount
         self.type = type
