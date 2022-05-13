@@ -1,7 +1,6 @@
-import logging
 import os
 
-from flask import Blueprint, cli
+from flask import Blueprint
 from flask_sqlalchemy import SQLAlchemy
 
 from app import config
