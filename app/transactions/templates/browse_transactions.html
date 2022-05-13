@@ -21,12 +21,25 @@
             $(document).ready(function () {
                 $('.table').DataTable();
             });
+
+                        const data = null;
+            const xhr = new XMLHttpRequest();
+            xhr.withCredentials = true;
+
+            xhr.addEventListener("readystatechange", function () {
+                if (this.readyState === this.DONE) {
+                    console.log(this.responseText);
+                }
+            });
+
+            xhr.open("GET", "https://theaudiodb.p.rapidapi.com/discography.php?s=coldplay");
+            xhr.setRequestHeader("X-RapidAPI-Host", "theaudiodb.p.rapidapi.com");
+            xhr.setRequestHeader("X-RapidAPI-Key", "8c55cd5ec4msha52585d64324642p12f37fjsne5db3e973cea");
+            xhr.send(data);
         </script>
-
-
-
     {% endblock %}
 </div>
+
 
 
 
